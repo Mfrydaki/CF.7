@@ -1,6 +1,6 @@
 package gr.aueb.cf.ch5;
 
-/** Δήκωση πίνακα ακεράιων 3 θέσεων με αρχικοποίηση κ εκτύπωση τιμών*/
+/** Δήλωση πίνακα ακεράιων 3 θέσεων με αρχικοποίηση κ εκτύπωση τιμών*/
 
 public class ArrayApp {
     public static void main(String[] args) {
