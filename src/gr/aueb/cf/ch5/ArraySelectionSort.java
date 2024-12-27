@@ -3,29 +3,26 @@ package gr.aueb.cf.ch5;
 public class ArraySelectionSort {
     public static void main(String[] args) {
 
+        int[] arr = {32, 53, 1, 9};
 
-        int[]arr = {2,6,10,4};
+        for (int i = 0; i < arr.length - 1; i++) {
+            int minIn = i;
 
-        for (int i = 0; i < arr.length-1; i++) {
-            int minIndex = i;
 
             for (int j = i + 1; j < arr.length; j++) {
-                if (arr[j] < arr[minIndex]) {
-                    minIndex = j;
+                if (arr[j] < arr[minIn]) {
+                    minIn = j;
+
                 }
             }
-            int temp = arr[minIndex];
-            arr[minIndex] = arr[i];
+            int temp = arr[minIn];
+            arr[minIn] = arr[i];
             arr[i] = temp;
         }
-
-        System.out.println("Ταξινομημένος πίνακας:");
-        for (int num : arr) {
-            System.out.print(num + " ");
+        for (int el : arr) {
+            System.out.print(el + " ");
         }
-    }
-}
 
 
-
+    }}
 
