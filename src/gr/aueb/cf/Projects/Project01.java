@@ -1,4 +1,4 @@
-package gr.aueb.cf.ch5;
+package gr.aueb.cf.Projects;
 
 public class Project01 {
 
@@ -6,31 +6,27 @@ public class Project01 {
         int[] arr = {10, 13, 7, 35, 23, 6, 87, 9, 30, 4, 7};
         int[] sortedlist = project(arr);
 
-//Εκτύπωση Ταξινομημένης Λίστας
-        System.out.print(" O ταξινομήμένος πίνακας είναι: " );
+       // Print the sorted list.
+        System.out.print("The sorted array is: " );
         for (int el : sortedlist) {
         System.out.print(el + " ");}
 
-
- // Εύρεση όλων των δυνατών εξαδων
-        //List<int[]> combinations = generateCombinations(sortedlist, 6);
-
- // Εκτύπωση των εξαδων
-        System.out.println("\n Όλες οι δυνατές εξαδες: \n");
+        // Print all possible combinations of six elements
+        System.out.println("\nAll possible combinations of six elements:\n");
         generateCombinations(arr);
         }
 
 
     public static int[] project(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
-// Βρίσκει το ελάχιστο
+            // Find the minimum element
             int min = i;
             for (int j = i; j < arr.length; j++) {
                 if (arr[j] < arr[min]) {
                     min = j;
                 }
             }
-//Αναταλλαγή-Κατάταξη
+            // Swap elements to place the minimum in its correct position
             int temp = arr[min];
             arr[min] = arr[i];
             arr[i] = temp;
@@ -41,7 +37,7 @@ public class Project01 {
     public static void generateCombinations(int[]arr){
         int n= arr.length;
 
-    // Δημιουργία συνδυασμών
+        // Generate combinations
     for ( int i=0; i<n-5 ;i++){
         for(int j=i+1; j<n-4; j++){
             for(int k=j+1; k<n-3 ; k++){
